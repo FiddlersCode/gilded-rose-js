@@ -1,4 +1,4 @@
-class Item {
+class Product {
   constructor(name, sellIn, quality){
     this.name = name;
     this.sellIn = sellIn;
@@ -6,7 +6,7 @@ class Item {
   }
 }
 
-class Shop {
+class Inn {
   constructor(items=[]){
     this.items = items;
   }
