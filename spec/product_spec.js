@@ -33,31 +33,31 @@ describe("Products", function() {
   });
 
   describe("sell-in", function() {
-     it("should update sell-in", function() {
-         const items = gildedRose.updateQuality();
-         expect(items[0].sellIn).toEqual(4);
+     it("decreases sell-in by 1", function() {
+         gildedRose.updateQuality();
+         expect(gildedRose.items[0].sellIn).toEqual(4);
      })
   });
 
   describe("quality", function() {
 
       beforeEach(function() {
-          items = gildedRose.updateQuality();
+          gildedRose.updateQuality();
       });
 
       it("decreases quality by 1", function() {
-          expect(items[0].quality).toEqual(4);
+          expect(gildedRose.items[0].quality).toEqual(4);
       });
 
       it("decreases quality by 2x when sellIn < 0", function() {
-          expect(items[1].quality).toEqual(3);
+          expect(gildedRose.items[1].quality).toEqual(3);
       });
 
       it("cannot have a negative quality", function() {
          for (let i = 0; i < 2; i++) {
              gildedRose.updateQuality();
          }
-         expect(items[1].quality).toEqual(0);
+         expect(gildedRose.items[1].quality).toEqual(0);
       });
   });
 
