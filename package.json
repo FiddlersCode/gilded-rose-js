@@ -1,0 +1,26 @@
+{
+  "name": "gildedrosejs",
+  "version": "1.0.0",
+  "description": "### About I used duck typing and inheritance to refactor the nested if/else conditionals to make a clean and easily extensible program.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "jasmine": "^2.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FiddlersCode/gilded-rose-js.git"
+  },
+  "author": "Paula Muldoon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FiddlersCode/gilded-rose-js/issues"
+  },
+  "homepage": "https://github.com/FiddlersCode/gilded-rose-js#readme"
+}
