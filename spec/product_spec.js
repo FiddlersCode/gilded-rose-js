@@ -26,10 +26,6 @@ describe("Products", function() {
       xit("can be created with a minimum quality of 0", function() {
           expect(new Product("horse", 5, -1)).toThrow(new Error("Minimum quality is 0."));
       });
-
-      xit("can be added to the items array", function() {
-          expect(gildedRose.items[0].name).toEqual("chocolate");
-      });
   });
 
   describe("sell-in", function() {
@@ -57,8 +53,6 @@ describe("Products", function() {
          for (let i = 0; i < 2; i++) {
              gildedRose.updateQuality();
          }
-          console.log(gildedRose.items[1]);
-
           expect(gildedRose.items[1].quality).toEqual(0);
       });
   });
