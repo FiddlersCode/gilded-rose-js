@@ -19,12 +19,16 @@ describe("Products", function() {
           expect(product1.quality).toEqual(5);
       });
 
-      xit("can be created with a max quality of 50", function() {
-          expect(new Product("horse", 5, 51)).toThrow(new Error("Max quality is 50."));
+      it("can be created with a max quality of 50", function() {
+          expect( function() {
+              new Product("horse", 5, 51)
+          }).toThrow(new Error("Max quality is 50."));
       });
 
-      xit("can be created with a minimum quality of 0", function() {
-          expect(new Product("horse", 5, -1)).toThrow(new Error("Minimum quality is 0."));
+      it("can be created with a minimum quality of 0", function() {
+          expect( function() {
+              new Product("horse", 5, -1)
+          }).toThrow(new Error("Minimum quality is 0."));
       });
   });
 

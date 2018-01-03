@@ -3,6 +3,12 @@ class BackstagePass {
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;
+
+        if (this.quality > 50) {
+            throw new Error('Max quality is 50.');
+        } else if (this.quality < 0) {
+            throw new Error('Minimum quality is 0.')
+        }
     }
 
     updateItems() {
