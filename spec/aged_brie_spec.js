@@ -29,19 +29,19 @@ describe("Aged Brie", function() {
 
     describe("sell-in", function() {
         it("decreases the sell-in by 1", function() {
-            gildedRose.updateQuality();
+            gildedRose.updateItems();
             expect(gildedRose.items[0].sellIn).toEqual(3);
         });
     });
 
     describe("quality", function() {
        it("increases in quality with age", function() {
-           gildedRose.updateQuality();
+           gildedRose.updateItems();
            expect(gildedRose.items[0].quality).toEqual(3);
        });
 
        it("has a max quality of 50", function() {
-           gildedRose.updateQuality();
+           gildedRose.updateItems();
            expect(gildedRose.items[1].quality).toEqual(50);
        })
     });

@@ -1,10 +1,10 @@
 // describe("Backstage Pass", function() {
 //    beforeEach(function() {
-//        pass = new Product("Backstage passes", 11, 3);
-//        pass2 = new Product("Backstage passes", 10, 3);
-//        pass3 = new Product("Backstage passes", 5, 3);
-//        pass4 = new Product("Backstage passes", 0, 10);
-//        pass5 = new Product("Backstage passes", 2, 50);
+//        pass = new BackstagePass("Backstage passes", 11, 3);
+//        pass2 = new BackstagePass("Backstage passes", 10, 3);
+//        pass3 = new BackstagePass("Backstage passes", 5, 3);
+//        pass4 = new BackstagePass("Backstage passes", 0, 10);
+//        pass5 = new BackstagePass("Backstage passes", 2, 50);
 //        gildedRose = new Inn([pass, pass2, pass3, pass4, pass5]);
 //    });
 //
@@ -22,21 +22,17 @@
 //         });
 //
 //         xit("can be created with a max quality of 50", function() {
-//             expect(new Product("Pass", 5, 51)).toThrow(new Error("Max quality is 50."));
+//             expect(new BackstagePass("Pass", 5, 51)).toThrow(new Error("Max quality is 50."));
 //         });
 //
 //         xit("can be created with a minimum quality of 0", function() {
-//             expect(new Product("Pass", 5, -1)).toThrow(new Error("Minimum quality is 0."));
-//         });
-//
-//         xit("can be added to the items array", function() {
-//             expect(gildedRose.items[0].name).toEqual("Backstage passes");
+//             expect(new BackstagePass("Pass", 5, -1)).toThrow(new Error("Minimum quality is 0."));
 //         });
 //     });
 //
 //     describe("sell-in", function() {
 //         it("decreases sell-in by 1", function() {
-//             gildedRose.updateQuality();
+//             gildedRose.updateItems();
 //             expect(gildedRose.items[0].sellIn).toEqual(10);
 //         })
 //     });
@@ -44,7 +40,7 @@
 //     describe("quality", function() {
 //
 //         beforeEach(function() {
-//             gildedRose.updateQuality();
+//             gildedRose.updateItems();
 //         });
 //
 //         it("increases in quality by 1 with >10 days before concert", function() {
@@ -69,7 +65,7 @@
 //
 //         xit("cannot have a negative quality", function() {
 //             for (let i = 0; i < 2; i++) {
-//                 gildedRose.updateQuality();
+//                 gildedRose.updateItems()§;
 //             }
 //             expect(gildedRose.items[1].quality).toEqual(0);
 //         });

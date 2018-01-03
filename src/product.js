@@ -5,7 +5,7 @@ class Product {
         this.quality = quality;
     }
 
-    updateQuality() {
+    updateItems() {
         this.lowerSellIn();
         this.lowerQuality();
     }

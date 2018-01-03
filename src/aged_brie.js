@@ -5,7 +5,7 @@ class AgedBrie {
         this.quality = quality;
     }
 
-    updateQuality() {
+    updateItems() {
         this.lowerSellIn();
         this.raiseQuality();
     }

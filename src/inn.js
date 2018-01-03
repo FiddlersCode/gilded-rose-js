@@ -2,9 +2,9 @@ class Inn {
   constructor(items=[]){
     this.items = items;
   }
-  updateQuality() {
+  updateItems() {
     for (let i = 0; i < this.items.length; i++) {
-        this.items[i].updateQuality();
+        this.items[i].updateItems();
     }
 
   }

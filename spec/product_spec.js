@@ -30,7 +30,7 @@ describe("Products", function() {
 
   describe("sell-in", function() {
      it("decreases sell-in by 1", function() {
-         gildedRose.updateQuality();
+         gildedRose.updateItems();
          expect(gildedRose.items[0].sellIn).toEqual(4);
      })
   });
@@ -38,7 +38,7 @@ describe("Products", function() {
   describe("quality", function() {
 
       beforeEach(function() {
-          gildedRose.updateQuality();
+          gildedRose.updateItems();
       });
 
       it("decreases quality by 1", function() {
@@ -51,7 +51,7 @@ describe("Products", function() {
 
       it("cannot have a negative quality", function() {
          for (let i = 0; i < 2; i++) {
-             gildedRose.updateQuality();
+             gildedRose.updateItems();
          }
           expect(gildedRose.items[1].quality).toEqual(0);
       });
