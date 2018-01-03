@@ -38,8 +38,7 @@ View the repository [here](https://github.com/pmuldoon86/gilded-rose-js) on GitH
 Clone the repo. Then:
 
 ## To run the tests
-```bash
-```
+open `SpecRunner.html` in the browser
 
 ## Diagram
 <a href="http://imgur.com/YF2GD7r"><img src="http://i.imgur.com/YF2GD7r.png" title="Gilded Rose Diagram" /></a>

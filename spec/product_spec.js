@@ -49,7 +49,7 @@ describe("Products", function() {
           expect(gildedRose.items[0].quality).toEqual(4);
       });
 
-      it("decreases quality by 2x when sellIn < 0", function() {
+      it("decreases quality by 2 when sellIn < 0", function() {
           expect(gildedRose.items[1].quality).toEqual(3);
       });
 
@@ -57,7 +57,9 @@ describe("Products", function() {
          for (let i = 0; i < 2; i++) {
              gildedRose.updateQuality();
          }
-         expect(gildedRose.items[1].quality).toEqual(0);
+          console.log(gildedRose.items[1]);
+
+          expect(gildedRose.items[1].quality).toEqual(0);
       });
   });
 
