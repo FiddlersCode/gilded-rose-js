@@ -1,14 +1,13 @@
 class BackstagePass {
-    constructor(name, sellIn, quality) {
+    constructor(name, sellIn, quality){
+        const qualityError = "Quality must be within 0 - 50 inclusive.";
+
+        if (quality > 50 || quality < 0) {
+            throw new Error(qualityError)
+        }
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;
-
-        if (this.quality > 50) {
-            throw new Error('Max quality is 50.');
-        } else if (this.quality < 0) {
-            throw new Error('Minimum quality is 0.')
-        }
     }
 
     updateItems() {
