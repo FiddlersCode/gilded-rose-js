@@ -30,8 +30,6 @@ class BackstagePass {
             this.quality += 2;
         }
 
-        if (this.quality > 50) {
-            this.quality = 50;
-        }
+        this.quality = Math.min(50, this.quality);
     }
 }
