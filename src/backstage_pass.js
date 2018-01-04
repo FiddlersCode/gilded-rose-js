@@ -12,10 +12,10 @@ class BackstagePass {
 
     updateItem() {
         this.updateQuality();
-        this.lowerSellIn();
+        this.reduceSellIn();
     }
 
-    lowerSellIn() {
+    reduceSellIn() {
         this.sellIn -= 1;
     }
 

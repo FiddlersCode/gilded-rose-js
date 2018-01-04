@@ -11,15 +11,15 @@ class Product {
     }
 
     updateItem() {
-        this.lowerSellIn();
-        this.lowerQuality();
+        this.reduceSellIn();
+        this.reduceQuality();
     }
 
-    lowerSellIn() {
+    reduceSellIn() {
         return this.sellIn -=1;
     }
 
-    lowerQuality() {
+    reduceQuality() {
         if (this.sellIn < 0) {
             this.quality -= 2;
         } else if (this.quality < 0) {

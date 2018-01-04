@@ -12,11 +12,11 @@ class AgedBrie {
     }
 
     updateItem() {
-        this.lowerSellIn();
+        this.reduceSellIn();
         this.raiseQuality();
     }
 
-    lowerSellIn() {
+    reduceSellIn() {
         return this.sellIn -=1;
     }
 
