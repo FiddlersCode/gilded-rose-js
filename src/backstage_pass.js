@@ -10,7 +10,7 @@ class BackstagePass {
         this.quality = quality;
     }
 
-    updateItems() {
+    updateItem() {
         this.updateQuality();
         this.lowerSellIn();
     }

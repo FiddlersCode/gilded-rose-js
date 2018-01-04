@@ -4,7 +4,7 @@ class Inn {
   }
   updateItems() {
     for (let i = 0; i < this.items.length; i++) {
-        this.items[i].updateItems();
+        this.items[i].updateItem();
     }
 
   }
