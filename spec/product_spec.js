@@ -1,5 +1,8 @@
 describe("Products", function() {
 
+    const anonymousName = "Product";
+    const anonymousSellin = 5;
+
   beforeEach(function() {
     product1 = new Product("chocolate", 5, 5);
     product2 = new Product("vanilla", 0, 5);
@@ -21,13 +24,13 @@ describe("Products", function() {
 
       it("can be created with a max quality of 50", function() {
           expect( function() {
-              new Product("horse", 5, 51)
+              new Product(anonymousName, anonymousSellin, 51)
           }).toThrow(new Error("Quality must be within 0 - 50 inclusive."));
       });
 
       it("can be created with a minimum quality of 0", function() {
           expect( function() {
-              new Product("horse", 5, -1)
+              new Product(anonymousName, anonymousSellin, -1)
           }).toThrow(new Error("Quality must be within 0 - 50 inclusive."));
       });
   });

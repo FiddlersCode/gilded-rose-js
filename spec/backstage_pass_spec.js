@@ -1,4 +1,8 @@
 describe("Backstage Pass", function() {
+
+    const anonymousName = "Backstage pass";
+    const anonymousSellIn = 5;
+
    beforeEach(function() {
        pass = new BackstagePass("Backstage passes", 11, 3);
        pass2 = new BackstagePass("Backstage passes", 10, 3);
@@ -23,13 +27,13 @@ describe("Backstage Pass", function() {
 
         it("can be created with a max quality of 50", function() {
             expect(function() {
-                new BackstagePass("Pass", 5, 51)
+                new BackstagePass(anonymousName, anonymousSellIn, 51)
             }).toThrow(new Error("Quality must be within 0 - 50 inclusive."));
         });
 
         it("can be created with a minimum quality of 0", function() {
             expect(function() {
-                new BackstagePass("Pass", 5, -1)
+                new BackstagePass(anonymousName, anonymousSellIn, -1)
             }).toThrow(new Error("Quality must be within 0 - 50 inclusive."));
         });
     });
