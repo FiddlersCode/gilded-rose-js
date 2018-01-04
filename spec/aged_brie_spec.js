@@ -3,22 +3,22 @@ describe("Aged Brie", function() {
     const anonymousSellIn = 5;
 
     beforeEach(function() {
-        brie0 = new AgedBrie("Aged Brie", 4, 2);
-        brie1 = new AgedBrie("Aged Brie", 4, 50);
-        gildedRose = new Inn([brie0, brie1]);
+        BRIE_WITH_SELLIN_4_DAYS = new AgedBrie("sellIn_4", 4, 2);
+        BRIE_WITH_QUALITY_50 = new AgedBrie("quality_50", 4, 50);
+        gildedRose = new Inn([BRIE_WITH_SELLIN_4_DAYS, BRIE_WITH_QUALITY_50]);
     });
 
     describe("Aged Brie creation", function() {
        it("can be created with a name", function() {
-          expect(brie0.name).toEqual("Aged Brie");
+          expect(BRIE_WITH_SELLIN_4_DAYS.name).toEqual("sellIn_4");
        });
 
        it("can be created with sell-in", function() {
-          expect(brie0.sellIn).toEqual(4);
+          expect(BRIE_WITH_SELLIN_4_DAYS.sellIn).toEqual(4);
        });
 
        it("can be created with quality", function() {
-           expect(brie0.quality).toEqual(2);
+           expect(BRIE_WITH_SELLIN_4_DAYS.quality).toEqual(2);
        });
 
        it("can be created with a max quality of 50", function() {
@@ -37,19 +37,21 @@ describe("Aged Brie", function() {
     describe("sell-in", function() {
         it("decreases the sell-in by 1", function() {
             gildedRose.updateItems();
-            expect(brie0.sellIn).toEqual(3);
+            expect(BRIE_WITH_SELLIN_4_DAYS.sellIn).toEqual(3);
         });
     });
 
     describe("quality", function() {
+        beforeEach(function() {
+            gildedRose.updateItems();
+        });
+
        it("increases in quality with age", function() {
-           gildedRose.updateItems();
-           expect(brie0.quality).toEqual(3);
+           expect(BRIE_WITH_SELLIN_4_DAYS.quality).toEqual(3);
        });
 
        it("has a max quality of 50", function() {
-           gildedRose.updateItems();
-           expect(brie1.quality).toEqual(50);
+           expect(BRIE_WITH_QUALITY_50.quality).toEqual(50);
        })
     });
 });
