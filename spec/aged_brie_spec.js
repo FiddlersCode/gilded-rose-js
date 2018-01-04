@@ -1,4 +1,7 @@
 describe("Aged Brie", function() {
+    const anonymousSellIn = 5;
+    const anonymousAgedBrie = "Aged Brie";
+
     beforeEach(function() {
         brie1 = new AgedBrie("Aged Brie", 4, 2);
         brie2 = new AgedBrie("Aged Brie", 4, 50);
@@ -20,13 +23,13 @@ describe("Aged Brie", function() {
 
        it("can be created with a max quality of 50", function() {
            expect(function() {
-               new AgedBrie("brie4", 5, 51)
+               new AgedBrie(anonymousAgedBrie, anonymousSellIn, 51)
            }).toThrow(new Error("Max quality is 50."));
        });
 
        it("can be created with a minimum quality of 0", function() {
            expect(function() {
-               new AgedBrie("brie5", 5, -1)
+               new AgedBrie(anonymousAgedBrie, anonymousSellIn, -1)
            }).toThrow(new Error("Minimum quality is 0."));
        });
     });
