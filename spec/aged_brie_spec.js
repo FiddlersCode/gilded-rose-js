@@ -24,13 +24,13 @@ describe("Aged Brie", function() {
        it("can be created with a max quality of 50", function() {
            expect(function() {
                new AgedBrie(anonymousAgedBrie, anonymousSellIn, 51)
-           }).toThrow(new Error("Max quality is 50."));
+           }).toThrow(new Error("Quality must be within 0 - 50 inclusive."));
        });
 
        it("can be created with a minimum quality of 0", function() {
            expect(function() {
                new AgedBrie(anonymousAgedBrie, anonymousSellIn, -1)
-           }).toThrow(new Error("Minimum quality is 0."));
+           }).toThrow(new Error("Quality must be within 0 - 50 inclusive."));
        });
     });
 

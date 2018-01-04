@@ -1,16 +1,21 @@
 class AgedBrie {
+
     constructor(name, sellIn, quality){
+        const qualityError = "Quality must be within 0 - 50 inclusive."
+
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;
 
         if (this.quality > 50) {
-            throw new Error('Max quality is 50.')
+            throw new Error(qualityError)
         } else if (this.quality < 0) {
-            throw new Error('Minimum quality is 0.')
+            throw new Error(qualityError)
         }
 
     }
+
+
 
     updateItems() {
         this.lowerSellIn();
